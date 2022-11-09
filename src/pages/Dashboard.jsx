@@ -4,9 +4,7 @@ import Sidebar from "../partials/Sidebar";
 import Header from "../partials/Header";
 import FilterButton from "../partials/actions/FilterButton";
 import Datepicker from "../partials/actions/Datepicker";
-import DashboardCard01 from "../partials/dashboard/DashboardCard01";
-import DashboardCard02 from "../partials/dashboard/DashboardCard02";
-import DashboardCard03 from "../partials/dashboard/DashboardCard03";
+import Card from "../partials/Card";
 import DashboardCard04 from "../partials/dashboard/DashboardCard04";
 import DashboardCard05 from "../partials/dashboard/DashboardCard05";
 import DashboardCard06 from "../partials/dashboard/DashboardCard06";
@@ -20,6 +18,41 @@ import DashboardCard13 from "../partials/dashboard/DashboardCard13";
 
 function Dashboard() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
+
+  const dashboardItems = [
+    {
+      id: 0,
+      type: "lumière",
+      title: "Lumière principale",
+      content: "Allumez ou éteignez la lumière",
+      hasToggle: true,
+      status: "disabled",
+    },
+    {
+      id: 1,
+      type: "garage",
+      title: "Gestion de la porte du garage",
+      content: "Ouverture du portail ou non",
+      hasToggle: true,
+      status: "disabled",
+    },
+    {
+      id: 2,
+      type: "tv",
+      title: "Télévision",
+      content: "Allumez ou éteignez votre téléviseur",
+      hasToggle: true,
+      status: "enabled",
+    },
+    {
+      id: 3,
+      type: "café",
+      title: "Cafetière",
+      content: "Allumez ou éteignez votre cafetière",
+      hasToggle: true,
+      status: "enabled",
+    },
+  ];
 
   return (
     <div className="flex h-screen  overflow-hidden">
@@ -54,13 +87,20 @@ function Dashboard() {
             </div>
 
             {/* Cards */}
-            <div className="grid grid-cols-12 gap-6">
-              {/* Line chart (Acme Plus) */}
-              <DashboardCard01 />
-              {/* Line chart (Acme Advanced) */}
-              <DashboardCard02 />
-              {/* Line chart (Acme Professional) */}
-              <DashboardCard03 />
+            <div className="grid grid-cols-12 gap-6 ">
+              {dashboardItems.map((item, index) => {
+                return (
+                  <Card
+                    title={item.title}
+                    content={item.content}
+                    heightValue={250}
+                    hasToggle={item.hasToggle}
+                    status={item.status}
+                    id={item.id}
+                  />
+                );
+              })}
+
               {/* Bar chart (Direct vs Indirect) */}
               <DashboardCard04 />
               {/* Line chart (Real Time Value) */}
