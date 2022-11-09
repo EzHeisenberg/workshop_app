@@ -25,24 +25,32 @@ function Dashboard() {
       type: "lumière",
       title: "Lumière principale",
       content: "Allumez ou éteignez la lumière",
+      hasToggle: true,
+      status: "disabled",
     },
     {
       id: 1,
       type: "garage",
       title: "Gestion de la porte du garage",
       content: "Ouverture du portail ou non",
+      hasToggle: true,
+      status: "disabled",
     },
     {
       id: 2,
       type: "tv",
       title: "Télévision",
       content: "Allumez ou éteignez votre téléviseur",
+      hasToggle: true,
+      status: "enabled",
     },
     {
       id: 3,
       type: "café",
       title: "Cafetière",
       content: "Allumez ou éteignez votre cafetière",
+      hasToggle: true,
+      status: "enabled",
     },
   ];
 
@@ -79,13 +87,16 @@ function Dashboard() {
             </div>
 
             {/* Cards */}
-            <div className="grid grid-cols-12 gap-6">
+            <div className="grid grid-cols-12 gap-6 ">
               {dashboardItems.map((item, index) => {
                 return (
                   <Card
                     title={item.title}
                     content={item.content}
                     heightValue={250}
+                    hasToggle={item.hasToggle}
+                    status={item.status}
+                    id={item.id}
                   />
                 );
               })}
