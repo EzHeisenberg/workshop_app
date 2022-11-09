@@ -2,37 +2,7 @@
   {
     "name": "Salle de bain",
     "icon": "",
-    "conso": "465 KWh/an",
-    "temp": "21°C"
-  },
-  {
-    "name": "Salle à manger",
-    "icon": "",
-    "conso": "1571 KWh/an",
-    "temp": "20°C"
-  },
-  {
-    "name": "Garage",
-    "icon": "",
-    "conso": "1029 KWh/an",
-    "temp": "15°C"
-  },
-  {
-    "name": "Cuisine",
-    "icon": "",
-    "conso": "2231 KWh/an",
-    "temp": "25°C"
-  },
-  {
-    "name": "Chambre Mike",
-    "icon": "",
-    "conso": "209 KWh/an",
-    "temp": "15°C"
-  },
-  {
-    "name": "Chambre Parents",
-    "icon": "",
-    "conso": "112 KWh/an",
-    "temp": "15°C"
+    "conso": "",
+    "temp": ""
   }
 ]
