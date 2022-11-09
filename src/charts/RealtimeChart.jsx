@@ -11,9 +11,7 @@ import { tailwindConfig, formatValue } from '../utils/Utils';
 Chart.register(LineController, LineElement, Filler, PointElement, LinearScale, TimeScale, Tooltip);
 
 function RealtimeChart({
-  data,
-  width,
-  height
+  data, width, height, complement, minChart, maxChart
 }) {
 
   const canvas = useRef(null);
@@ -35,8 +33,8 @@ function RealtimeChart({
             grid: {
               drawBorder: false,
             },
-            suggestedMin: 30,
-            suggestedMax: 80,
+            suggestedMin: minChart,
+            suggestedMax: maxChart,
             ticks: {
               maxTicksLimit: 5,
               callback: (value) => formatValue(value),
@@ -81,7 +79,7 @@ function RealtimeChart({
         },
         animation: false,
         maintainAspectRatio: false,
-        resizeDelay: 200,
+        resizeDelay: 1100,
       },
     });
     return () => chart.destroy();
@@ -99,19 +97,19 @@ function RealtimeChart({
     } else {
       chartDeviation.current.style.backgroundColor = tailwindConfig().theme.colors.green[500];
     }
-    chartDeviation.current.innerHTML = `${diff > 0 ? '+' : ''}${diff.toFixed(2)}%`;
+    chartDeviation.current.innerHTML = `${diff > 0 ? '+' : ''}${diff.toFixed(3)}%`;
   }, [data]);
 
   return (
     <React.Fragment>
       <div className="px-5 py-3">
         <div className="flex items-start">
-          <div className="text-3xl font-bold text-slate-800 mr-2 tabular-nums">$<span ref={chartValue}>57.81</span></div>
-          <div ref={chartDeviation} className="text-sm font-semibold text-white px-1.5 rounded-full"></div>
+          <div className="text-3xl font-bold text-slate-800 mr-2 tabular-nums"><span ref={chartValue}>57.81</span> {complement} </div>
+          <div ref={chartDeviation} className="text-sm font-semibold text-white px-1.5 rounded-full"/>
         </div>
       </div>
       <div className="grow">
-        <canvas ref={canvas} data={data} width={width} height={height}></canvas>
+        <canvas ref={canvas} data={data} width={width} height={height}/>
       </div>
     </React.Fragment>
   );
