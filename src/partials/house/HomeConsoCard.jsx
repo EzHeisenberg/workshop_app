@@ -82,7 +82,7 @@ function HomeConsoCard() {
       <header className="px-5 py-4 border-b border-slate-100 flex items-center">
         <h2 className="font-semibold text-slate-800">Temps réel</h2>
       </header>
-      <RealtimeChart data={chartData} width={595} height={260} complement={"KW/h"} minChart={2500} maxChart={5000} />
+      <RealtimeChart data={chartData} width={595} height={260} complement={"KWh/an"} minChart={2500} maxChart={5000} />
     </div>
   );
 }
