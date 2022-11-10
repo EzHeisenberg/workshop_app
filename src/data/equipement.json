@@ -1,6 +1,42 @@
 [
   {
-    "name": "",
-    "type": ""
+    "id": 0,
+    "name": "Lumières Salon",
+    "state": true,
+    "average": 0.009,
+    "total": 9,
+    "price": 1.95
+  },
+  {
+    "id": 0,
+    "name": "Lumières Cuisine",
+    "state": false,
+    "average": 0.009,
+    "total": 9,
+    "price": 2.85
+  },
+  {
+    "id": 1,
+    "name": "Lumières Chambre Mike",
+    "state": false,
+    "average": 0.009,
+    "total": 9,
+    "price": 5.25
+  },
+  {
+    "id": 2,
+    "name": "Télévision Salon",
+    "state": false,
+    "average": 0.35,
+    "total": 52,
+    "price": 298
+  },
+  {
+    "id": 3,
+    "name": "Chauffage cuisine",
+    "state": true,
+    "average": 2,
+    "total": 131,
+    "price": 1641.39
   }
 ]
