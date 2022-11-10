@@ -101,6 +101,7 @@ function Dashboard() {
                 );
               })}
             </div>
+
             <div className="grid grid-cols-12 gap-6 ">
               {/* Bar chart (Direct vs Indirect) */}
               <DashboardCard04 />

@@ -4,7 +4,7 @@ import React, {useState} from "react";
 import Sidebar from "../partials/Sidebar";
 import Header from "../partials/Header";
 import Card from "../partials/Card";
-import TopConsoCard from "../partials/house/TopConsoCard";
+import ConsoCard from "../partials/house/ConsoCard";
 import HomeConso from "../partials/house/HomeConsoCard";
 import CardContent from "../partials/house/CardContent";
 import dataRooms from '../data/rooms.json'
@@ -38,7 +38,7 @@ function House() {
 
                         <h2 className="text-2xl font-bold pb-4">Maison</h2>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 py-4">
-                            <div><TopConsoCard/></div>
+                            <div><ConsoCard/></div>
                             <div><HomeConso/></div>
                         </div>
 

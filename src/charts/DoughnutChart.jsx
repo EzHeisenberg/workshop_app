@@ -102,10 +102,10 @@ function DoughnutChart({
   return (
     <div className="grow flex flex-col justify-center">
       <div>
-        <canvas ref={canvas} width={width} height={height}></canvas>
+        <canvas ref={canvas} width={width} height={height}/>
       </div>
       <div className="px-5 pt-2 pb-6">
-        <ul ref={legend} className="flex flex-wrap justify-center -m-1"></ul>
+        <ul ref={legend} className="flex flex-wrap justify-center -m-1"/>
       </div>
     </div>
   );
