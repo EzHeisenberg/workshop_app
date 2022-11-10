@@ -1,7 +1,6 @@
 import React, {useState, useEffect, useRef} from 'react';
 import {NavLink, useLocation} from 'react-router-dom';
 
-import SidebarLinkGroup from './SidebarLinkGroup';
 import { BiHomeAlt } from "react-icons/bi";
 import { RiDashboardLine } from "react-icons/ri";
 import { BsBoxSeam } from "react-icons/bs";

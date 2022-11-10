@@ -141,17 +141,12 @@ function House() {
                                         </tr>
                                         </tbody>
                                     </table>
-
                                 </div>
                             </div>
                         </div>
-
-
-
                     </div>
                 </main>
             </div>
-
         </div>
     );
 }
