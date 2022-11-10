@@ -41,6 +41,10 @@ function House() {
                             <div><TopConsoCard/></div>
                             <div><HomeConso/></div>
                         </div>
+
+
+
+
                         <h2 className="text-2xl font-bold py-4">Pièces</h2>
                         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 py-4">
                             {dataRooms && dataRooms.length > 0 && dataRooms.map((item) =>

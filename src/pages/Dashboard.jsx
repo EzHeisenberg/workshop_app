@@ -87,20 +87,21 @@ function Dashboard() {
             </div>
 
             {/* Cards */}
-            <div className="grid grid-cols-12 gap-6 ">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 py-4">
               {dashboardItems.map((item, index) => {
                 return (
-                  <Card
-                    title={item.title}
-                    content={item.content}
-                    heightValue={250}
-                    hasToggle={item.hasToggle}
-                    status={item.status}
-                    id={item.id}
-                  />
+                    <Card
+                        title={item.title}
+                        content={item.content}
+                        heightValue={250}
+                        hasToggle={item.hasToggle}
+                        status={item.status}
+                        id={item.id}
+                    />
                 );
               })}
-
+            </div>
+            <div className="grid grid-cols-12 gap-6 ">
               {/* Bar chart (Direct vs Indirect) */}
               <DashboardCard04 />
               {/* Line chart (Real Time Value) */}
