@@ -5,6 +5,10 @@ import Header from "../partials/Header";
 import FilterButton from "../partials/actions/FilterButton";
 import Datepicker from "../partials/actions/Datepicker";
 import Card from "../partials/Card";
+import { BsFillSunFill } from "react-icons/bs";
+import { GiHomeGarage } from "react-icons/gi";
+import { CgScreen } from "react-icons/cg";
+import { GiCoffeeMug } from "react-icons/gi";
 import DashboardCard04 from "../partials/dashboard/DashboardCard04";
 import DashboardCard05 from "../partials/dashboard/DashboardCard05";
 import DashboardCard06 from "../partials/dashboard/DashboardCard06";
@@ -27,6 +31,7 @@ function Dashboard() {
       content: "Allumez ou éteignez la lumière",
       hasToggle: true,
       status: "disabled",
+      icon: <BsFillSunFill size={30} />,
     },
     {
       id: 1,
@@ -35,6 +40,7 @@ function Dashboard() {
       content: "Ouverture du portail ou non",
       hasToggle: true,
       status: "disabled",
+      icon: <GiHomeGarage size={30} />,
     },
     {
       id: 2,
@@ -43,6 +49,7 @@ function Dashboard() {
       content: "Allumez ou éteignez votre téléviseur",
       hasToggle: true,
       status: "enabled",
+      icon: <CgScreen size={30} />,
     },
     {
       id: 3,
@@ -51,6 +58,7 @@ function Dashboard() {
       content: "Allumez ou éteignez votre cafetière",
       hasToggle: true,
       status: "enabled",
+      icon: <GiCoffeeMug size={30} />,
     },
   ];
 
@@ -97,6 +105,7 @@ function Dashboard() {
                     hasToggle={item.hasToggle}
                     status={item.status}
                     id={item.id}
+                    icon={item.icon}
                   />
                 );
               })}
